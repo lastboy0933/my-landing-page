@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل ورود به حساب کاربری</title>
+    <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url("Shabnam-Bold-FD.ttf") format('woff2'),
+        }
+
+        body {
+            font-family: 'MyCustomFont', Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1000px;
+        }
+
+        .register-panel {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: right;
+        }
+
+        .register-panel h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .register-panel input[type="text"],
+        .register-panel input[type="password"] {
+            direction: rtl;
+            width: 80%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-right: 15px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-panel button {
+            font-size: 20px;
+            width: 70%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 40px;
+        }
+
+        .register-panel button:hover {
+            background-color: #0056b3;
+        }
+
+        .register-panel a {
+            color: #000000;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10PX;
+        }
+
+        p{
+            margin-right: 15px;
+        }
+
+        .a1{
+            margin-right: 15px;
+        }
+
+        .a2{
+            text-align: center;
+        }
+
+        .register-panel a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+    </head>
+    <body>
+    <div class="register-panel">
+        <h1>ورود به حساب کاربری</h1>
+        <form>
+            <p>نام کاربری</p>
+            <input type="text" required>
+            <p>رمز عبور</p>
+            <input type="password"  required>
+            <a class="a1" href="#">فراموشی رمز عبور</a>
+            <button type="submit">ورود</button>
+            <a class="a2" href="sign-in.html">ایجاد حساب کاربری</a>
+        </form>
+    </div>
+</body>
+</html>

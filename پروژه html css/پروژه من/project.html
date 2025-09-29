@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>luxe</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+        <link rel="icon" type="img" href="my_logo.png">
+        <style>
+            
+            body{
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .navbar {
+                background-color: #fafafa;
+                overflow: hidden;
+                margin-top: 2px;
+                font-size: small;
+            }
+
+            .navbar i{
+                margin-left: -20px ;
+            }
+
+            .navbar1 a ,i {
+                margin: 5px;
+                float: right;
+                color: #0a0a0a;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+
+            .navbar2 a ,.icon-user , .icon-add{
+                margin: -4px;
+                float: left;
+                color: #0a0a0a;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+
+            .navbar a:hover {
+                color: rgb(119, 100, 100);
+            }
+
+            .navbar i:hover {
+                color: rgb(255, 6, 6);
+            }
+
+            .my_logo{
+                float: left;
+                height: 70px;
+                margin-top: -10px;
+            }
+
+            .navbar2 img {
+                transition: transform 0.7s ease;
+            }
+
+            .navbar2 img:hover {
+                transform: scale(1.2);
+            }
+
+            @font-face {
+                font-family: 'MyCustomFont';
+                src: url("Shabnam-Bold-FD.ttf") format('truetype')
+            }
+
+            body {
+                font-family: 'MyCustomFont', Arial, sans-serif;
+            }
+
+            .fixed-pic {
+                position: fixed;
+                left: 10px;
+                bottom: 10px;
+                background-color: #f1f1f1;
+                padding: 1px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                height: 40px;
+                width:40px;
+                cursor: pointer;
+                transition: transform 0.5s ease;
+            }
+
+            .imag img:hover{
+                transform: scale(1.4);
+            }
+
+            .photo{
+                height: 100%;
+                width: 100%;
+                transition: transform 0.5s ease;
+            }
+
+            .sale img:hover {
+                transform: scale(1.1);
+            }
+
+            .cards1 , .cards2 , .cards3{
+                display: flex;
+                overflow: auto;
+                height: 450px;
+            }
+
+            .card1 , .card2 , .card3 , .card4 , .card5 , .card6 , .card7 , .card8{
+                background-color: #ffffff;
+                border-radius: 10px;
+                margin: 5px;
+                margin-bottom: 15px;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .cards1 img {
+                transition: transform 0.7s ease;
+                height: 100px;
+                width: 130px;
+            }
+
+            .cards2 img {
+                transition: transform 0.7s ease;
+                height: 220px;
+                width: 110px;
+            }
+
+            .cards3 img {
+                transition: transform 0.7s ease;
+                height: 220px;
+                width: 110px;
+            }
+
+            .cards1 img:hover {
+                transform: scale(1.2);
+            }
+
+            .cards2 img:hover {
+                transform: scale(1.2);
+            }
+
+            .cards3 img:hover {
+                transform: scale(1.2);
+            }
+
+            .name{
+                text-align: end;
+                margin: 20px;
+                position: relative;
+                transition: transform 5.0s ease-in-out;
+            }
+
+            .name:hover{
+                transform: translateX(-500px);
+            }
+
+            .footer {
+                background-color: #513B2C;
+                color: white;
+                text-align: right;
+                padding: 20px;
+                width: 1570px;
+                display: flex;
+                justify-self: center;
+                position: relative;
+            }
+
+            .footer input, .footer textarea {
+                width: 80%;
+                padding: 10px;
+                margin: 5px;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .footer input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+                width: 55px;
+            }
+
+            .footer input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+            .poll{
+                width: 500px;
+                margin-left: 50px;
+            }
+
+            .button{
+                display: flex;
+                justify-self: end;
+            }
+
+            .contact , .contact2{
+                margin-left: 200px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .contact-icon i{
+                margin-top: -10px;
+                margin-right: -25px;
+                color: #f1f1f1;
+            }
+
+            .social-media i{
+                margin-right: -25px;
+                color: #f1f1f1;
+            }
+
+            .list{
+                direction: rtl;
+                margin-right: -20px;
+            }
+
+            li{
+                margin-top: 20px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="navbar">
+            <nav class="navbar1">
+                <div class="icon-home">
+                    <i class="fa fa-home"></i>
+                    <a  href="#home" style="margin-left:-20px;">صفحه اصلی</a>
+
+                </div>
+
+                <div class="icon-shop">
+                    <i class="fa fa-shopping-cart"></i>
+                    <a href="#shop" style="margin-left:-20px;">لیست محصولات</a>
+
+                </div>
+
+                <div class="icon-women">
+                    <i class="fa fa-female"></i>
+                    <a href="#women" style="margin-left:-20px;">زنانه</a>
+
+                </div>
+
+                <div class="icon-phone">
+                    <i class="fa fa-phone"></i>
+                    <a href="#contact" style="margin-left:-20px;">تماس با ما</a>
+                </div>
+            </nav>
+
+            <nav class="navbar2">
+                <img class="my_logo" src="my_logo.png" alt="ERROR">
+
+                <div class="icon-user">
+                    <i class="fa fa-sign-in" style="margin-top:-2px;"></i>
+                    <a href="login.html" style="margin-left:-10px; margin-right: 2px;">ورود به حساب کاربری</a>
+
+                </div>
+
+                <div class="icon-add">
+                    <i class="fa fa-user" style="margin-top:-2px;"></i>
+                    <a href="sign-in.html" style="margin-left:-50px; margin-right: 2px;">ایجاد حساب</a>
+
+                </div>
+
+            </nav>
+        </div>
+
+
+        <div class="sale">
+            <img class="photo" src="a1.jpg" alt="ERROR">
+        </div>
+
+        <div class="name">
+            <h1>کتونی</h1>
+        </div>
+        <main>
+            <div class="cards1">
+
+                <div class="card1">
+                    <img src="pi1.png" alt="کفش ریبوک">
+                    <p>مدل : نایک</p>
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">866,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">766,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card2">
+                    <img src="pi2.png" alt="کفش ریبوک">
+                    <p>مدل : نایک</p>
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">966,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">756,000 تومان</p>
+                    <p>کد: 321147</p>
+                    </div>
+
+                <div class="card3">
+                    <img src="pi3.png" alt="کفش ریبوک">
+                    <p>مدل : ریبوک</p>
+                    <p>سایز: 41</p>
+                    <del style="font-size: 16px;">680,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">550,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card4">
+                    <img src="pi4.png" alt="کفش ریبوک">
+                    <p>مدل : نایک</p>
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">846,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">746,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card5">
+                    <img src="pi5.png" alt="کفش ریبوک">
+                    <p>مدل : نیوبالانس</p>
+                    <p>سایز: 40</p>
+                    <del style="font-size: 16px;">466,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">366,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card6">
+                    <img src="pi1.png" alt="کفش ریبوک">
+                    <p>مدل : نایک</p>
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">866,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">766,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card7">
+                    <img src="pi2.png" alt="کفش ریبوک">
+                    <p>مدل : نایک</p>
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">966,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">756,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card8">
+                    <img src="pi3.png" alt="کفش ریبوک">
+                    <p>مدل : ریبوک</p>
+                    <p>سایز: 41</p>
+                    <del style="font-size: 16px;">680,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">550,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+            </div>
+
+
+            <div class="name">
+                <h1>لباس زنانه</h1>
+            </div>
+            <div class="cards2">
+
+                <div class="card1">
+                    <img src="pe1.png" alt="کفش ریبوک">
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">1,000,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">900,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card2">
+                    <img src="pe2.png" alt="کفش ریبوک">
+                    <p>سایز: 38</p>
+                    <del style="font-size: 16px;">1,500,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">1,00,000 تومان</p>
+                    <p>کد: 321147</p>
+                    </div>
+
+                <div class="card3">
+                    <img src="pe3.png" alt="کفش ریبوک">
+                    <p>سایز: 40</p>
+                    <del style="font-size: 16px;">1,350,000 تومان</del>
+                    <p style="font-size: 16px; color: red;" >700,,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card4">
+                    <img src="pe4.png" alt="کفش ریبوک">
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">1,320,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">850,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card5">
+                    <img src="pe5.png" alt="کفش ریبوک">
+                    <p>سایز: 38</p>
+                    <del style="font-size: 16px;">980,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">750,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card6">
+                    <img src="pe6.png" alt="کفش ریبوک">
+                    <p>سایز: 40</p>
+                    <del style="font-size: 16px;">1,240,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">1,000,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card7">
+                    <img src="pe7.png" alt="کفش ریبوک">
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">1,100,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">980,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card8">
+                    <img src="pe1.png" alt="کفش ریبوک">
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">1,000,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">900,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+            </div>
+
+
+            <div class="name">
+                <h1>شلوار لی</h1>
+            </div>
+            <div class="cards3">
+
+                <div class="card1">
+                    <img src="pj1.png" alt="کفش ریبوک">
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">900,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">700,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card2">
+                    <img src="pj2.png" alt="کفش ریبوک">
+                    <p>سایز: 38</p>
+                    <del style="font-size: 16px;">1,400,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">900,000 تومان</p>
+                    <p>کد: 321147</p>
+                    </div>
+
+                <div class="card3">
+                    <img src="pj3.png" alt="کفش ریبوک">
+                    <p>سایز: 40</p>
+                    <del style="font-size: 16px;">1,250,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">750,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card4">
+                    <img src="pj4.png" alt="کفش ریبوک">
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">1,350,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">800,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card5">
+                    <img src="pj5.png" alt="کفش ریبوک">
+                    <p>سایز: 38</p>
+                    <del style="font-size: 16px;">880,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">790,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card6">
+                    <img src="pj6.png" alt="کفش ریبوک">
+                    <p>سایز: 40</p>
+                    <del style="font-size: 16px;">1,340,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">800,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card7">
+                    <img src="pj7.png" alt="کفش ریبوک">
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">1,200,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">900,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+
+                <div class="card8" id="i">
+                    <img src="pj8.png" alt="کفش ریبوک">
+                    <p>سایز: 42</p>
+                    <del style="font-size: 16px;">1,300,000 تومان</del>
+                    <p style="font-size: 16px; color: red;">999,000 تومان</p>
+                    <p>کد: 321147</p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+
+            <div>
+                <form action="#poll" method="post" class="poll">
+                    <p for="poll-name">انتقادات و پیشنهادات</p>
+                    <textarea id="comment" name="comment" rows="7" required></textarea><br>
+                    <div class="button">
+                        <input type="submit" value="ارسال">
+                        <input type="submit" value="حذف">
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact">
+                <p class="contact-name">تماس با ما </p>
+                <div class="contact-icon">
+                    <i class="fa fa-telegram"></i>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt"></i>
+                </div>
+
+                <div class="social-media" >
+                    <span class="material-symbols-outlined" style="margin-right: -4px; margin-top: 13px;">mail</span>
+                    <p style="float: left; margin-right: 10px;">Luxine@gmail.com</p>
+
+                </div>
+
+                <div class="social-media" >
+                    <svg style="margin-right: -4px; margin-top: 13px;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+                    <p style="float: left;" >www.luxine.ir</p>
+
+                </div>
+
+                <div class="social-media" >
+                    <i class='fa fa-phone' style="width: 24px;" ></i>
+                    <p style="float: left;">02133333333</p>
+
+                </div>
+            </div>
+
+            <div class="contact2">
+                <p class="contact-name">راهنمای خرید</p>
+                <ul class="list">
+                    <li style="margin-top: -10px;">نحوه ثبت سفارش</li>
+                    <li>رویه ارسال سفارش</li>
+                    <li>شیوه های پرداخت</li>
+                </ul>
+            </div>
+            <div class="contact2">
+                <p class="contact-name">خدمات مشتریان</p>
+                <ul class="list">
+                    <li style="margin-top: -10px;">مرجوع کردن</li>
+                    <li>پشتیبانی</li>
+                    <li>شکایات</li>
+                    <li>خرید حضوری</li>
+                </ul>
+            </div>
+
+
+        </footer>
+
+        <div class="imag">
+            <a href="#i"><img class="fixed-pic" src="images.png" alt="error"></a>
+        </div>
+    </body>
+</html>
